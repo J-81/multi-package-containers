@@ -25,7 +25,7 @@ jobs:
       run: |
         mulled-build-files --check-published --singularity --namespace $MULLED_NAMESPACE build-and-test ./combinations --verbose
     - name: Upload images (if pushed to master branch)
-      if: github.ref == 'refs/heads/master' && github.repository_owner == 'BioContainers'
+      if: github.ref == 'refs/heads/master' && github.repository_owner == 'J-81'
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         INVOLUCRO_AUTH: "https://${{ secrets.MY_USER }}:${{ secrets.MY_PASSWORD }}@quay.io/v1/?email=${{ secrets.MY_EMAIL }}"
