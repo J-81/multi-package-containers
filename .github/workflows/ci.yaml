@@ -1,7 +1,7 @@
 name: Build image
 on: [push, pull_request]
 env:
-  MULLED_NAMESPACE: biocontainers
+  MULLED_NAMESPACE: gl_images
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
